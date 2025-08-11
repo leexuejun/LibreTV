@@ -172,6 +172,29 @@ ckzy: {
         name: '玉兔资源',
         adult: true
     },
+   // 下面是资源失效率高的API源，不建议使用
+    subo: {
+        api: 'https://subocaiji.com/api.php/provide/vod',
+        name: '速播资源'
+    },
+    fczy: {
+        api: 'https://api.fczy888.me/api.php/provide/vod',
+        name: '蜂巢资源'
+    },
+    ukzy: {
+        api: 'https://api.ukuapi88.com/api.php/provide/vod',
+        name: 'U酷资源'
+    },
+};
+
+// 定义合并方法
+function extendAPISites(newSites) {
+    Object.assign(API_SITES, newSites);
+}
+
+// 暴露到全局
+window.API_SITES = API_SITES;
+window.extendAPISites = extendAPISites;
 
 // 添加聚合搜索的配置选项
 const AGGREGATED_SEARCH_CONFIG = {
